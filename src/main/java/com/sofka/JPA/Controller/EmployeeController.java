@@ -19,7 +19,7 @@ public class EmployeeController {
     EmployeeServices eServices = new EmployeeServices(); // Instancia singlenton
 
     // 1) Obtener todos los Empleados
-    @GetMapping("/employeed/all")
+    @GetMapping()
     public ArrayList<Employee> getAllEmployee() {
         return this.eServices.getAllEmployee();
     }
@@ -31,7 +31,7 @@ public class EmployeeController {
     }
 
     // 3) Crear Empleado
-    @PostMapping("/employeed/create")
+    @PostMapping()
     public Employee createEmployee(@RequestBody Employee newEmploye) {
         return this.eServices.createEmployee(newEmploye);
     }
